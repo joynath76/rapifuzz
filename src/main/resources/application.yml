@@ -1,0 +1,11 @@
+rapifuzz:
+  security:
+    roles:
+      - role: ADMIN
+        endpoint: /api/incidents/**
+    permitUrls:
+      - /login
+      - /api/users/register
+      - /api/postal/*
+      - /reset/password
+      - /api/*
