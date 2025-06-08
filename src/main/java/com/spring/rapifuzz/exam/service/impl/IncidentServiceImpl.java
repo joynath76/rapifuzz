@@ -38,7 +38,7 @@ public class IncidentServiceImpl extends AbstractService implements IncidentServ
 
     @KafkaListener(groupId = "rapifuzz-group", topics = "kafka-topic")
     private void saveIncident(Incident incident) {
-        log.error("Consumed incident: {}", incident);
+        log.error("Consumed incident : {}", incident);
         incidentRepository.save(incident);
     }
 
